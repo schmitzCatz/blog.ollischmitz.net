@@ -1,0 +1,33 @@
+title: Olli.Schmitz | Blog
+email: mail@ollischmitz.net
+description: >-
+  My thoughts about Coding, Software Design, Architecture and other things
+baseurl: "/"
+url: "http://blog.ollischmitz.net"
+include:
+  - _pages
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+sass:
+  implementation: sassc
+  style: compact
+  sass_dir: _sass
+  line_comments: false
+  sourcemap: always
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: author
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
