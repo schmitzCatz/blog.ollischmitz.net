@@ -12,6 +12,6 @@ if [ -f Gemfile ]; then
 fi
 
 # If there's a package.json, then run `yarn install`
-if [ -f package.json]; then
+if [ -f package.json ]; then
     yarn install
 fi
