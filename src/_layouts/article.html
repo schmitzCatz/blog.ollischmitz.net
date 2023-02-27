@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="section">    
+    <div class="container box">        
+        <div class="columns">            
+            <div class="column">
+                <p class="title">{{page.title}}</p>
+                <p class="subtitle is-italic has-text-grey">{{page.abstract}}</p>
+                <div class="tags is-small">
+                    {% for tag in page.tags %}
+                    <span class="tag">{{tag | rstrip }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="column">
+                {% include author.html %}
+            </div>
+        </div>
+        <div class="content">
+            {{content}}
+        </div>
+    </div>
+</section>

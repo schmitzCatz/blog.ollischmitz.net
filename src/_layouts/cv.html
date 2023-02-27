@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="has-navbar-fixed-top has-background-white-ter">
+{% include head.html %}
+<body>
+    <nav class="navbar navbar-end is-fixed-top is-noPrint has-background-white-ter">
+        <div class="buttons">
+            <a href="/vitae" class="button is-link navbar-item">
+                <span class="icon is-medium"><i class="fa fa-file-pdf"></i></span>
+                <span>Curriculum Vitae</span>
+            </a>
+
+            <a href="javascript:window.print()" class="button is-link  navbar-item">
+                <span class="icon is-medium"><i class="fa fa-print"></i></span>
+                <span>Curriculum Vitae</span>
+            </a>
+        </div>
+    </nav>
+    <section class="section content pt-0">
+        {{content}}
+    </section>
+</body>
+
+
+</html>

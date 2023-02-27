@@ -1,0 +1,41 @@
+$color-dm-1: #03001C;
+$color-dm-2: #301E67;
+$color-dm-3: #5B8FB9;
+$color-dm-4: #B6EADA;
+
+.is-light {
+    color: yellow;
+}
+
+.is-dark {
+    color: #301E67;
+}
+
+body {
+    background-color: $light;
+    height: 100vh;
+    transition: all 0.4s ease;
+}
+
+body .subtitle,
+body .title {
+    color: $dark;
+}
+
+
+body.dark {
+    background-color: $dark;
+    color: $light;
+}
+
+body.dark .subtitle,
+body.dark .title,
+body.dark h1,
+body.dark h2 {
+    color: $light;
+}
+
+body.dark button {
+    background: $light;
+    color: $dark;
+}

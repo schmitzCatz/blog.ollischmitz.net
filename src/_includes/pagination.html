@@ -1,0 +1,26 @@
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" role="navigation" aria-label="pagination">
+    {% if paginator.previous_page %}
+    <a class="pagination-previous" href="{{ paginator.previous_page_path }}">Previous</a>
+    {% else %}
+    <span class="pagination-previous is-disabled">Previous</span>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a class="pagination-next" href="{{ paginator.next_page_path }}">Next page</a>
+    {% else %}
+    <span class="pagination-next is-disabled">Next page</span>
+    {% endif %}
+    <ul class="pagination-list">
+        {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+        <a class="pagination-link is-current">{{ page }}</a>
+        {% elsif page == 1 %}
+        <a href="{{ '/' | relative_url }}" class="pagination-link">{{ page }}</a>
+        {% else %}
+        <a href="{{ site.paginate_path | relative_url |replace: ':num', '/:num' |replace: ':num', page}}"
+            class="pagination-link">{{ page }}</a>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}

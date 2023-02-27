@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "syler.sass-indented",
+        "rebornix.ruby",
+        "dbaeumer.vscode-eslint",
+        "bierner.markdown-preview-github-styles",
+        "ms-vscode-remote.remote-containers"
+    ]
+}

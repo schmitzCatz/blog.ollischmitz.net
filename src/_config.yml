@@ -1,33 +1,44 @@
 title: Olli.Schmitz | Blog
+name: Oliver Schmitz
 email: mail@ollischmitz.net
+timezone: Europe/Berlin
 description: >-
   My thoughts about Coding, Software Design, Architecture and other things
 baseurl: "/"
 url: "http://blog.ollischmitz.net"
 include:
   - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-archives
-sass:
-  implementation: sassc
-  style: compact
-  sass_dir: _sass
-  line_comments: false
-  sourcemap: always
-defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: author
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-  - scope:
-      path: ""
-    values:
-      layout: default
+  - jekyll-diagrams
+  - jekyll-paginate-v2
+  - liquid_reading_time
+  - liquid_pluralize
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      layout: article      
+      author:
+      tags: []
+      abstract:
+    posts:  
+      layout: article
+      author:
+      tags: []
+      abstract:
+      image:
+      image-alt:
+      image-credits:
+pagination:
+  enabled: true   
+  debug: true
+  per_page: 3  
+  permalink: '/page/:num'
+  sort_field: 'date'
+  sort_reverse: true

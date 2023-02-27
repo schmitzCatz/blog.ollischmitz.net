@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="has-navbar-fixed-bottom has-background-white-ter">
+
+{% include head.html %}
+
+<body>
+  <section id="head">
+    <!-- Hero -->
+    {% include hero.html %}
+    <!-- ./Hero-->
+
+    <!-- Navigation -->
+    {% include navigation.html %}
+    <!-- ./Navigation -->
+  </section>
+
+  <!-- Content -->
+  <div class="content columns mt-2">
+    <div class="column is-8">
+      {{ content }}
+    </div>
+    <!-- sidebar-->
+    <div class="sidebar column is-4 mb-1 pt-6">      
+      <div class="timeline">        
+        {% for company in site.data.cv %}
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <time class="heading" datetime="{{company.start}}">{{company.start | date: "%B %Y"}}</time>
+            <p>
+              <strong>{{company.position}}</strong> <br />
+              {{company.name}}
+            </p>
+          </div>
+        </div>
+        {% endfor %}        
+      </div>
+    </div>
+    <!--./Sidebar-->
+  </div>
+
+  <!-- ./Content -->
+
+  <section id="footer" class="pt-6">
+    <!-- Footer -->
+    {% include footer.html %}
+    <!-- ./Footer -->
+  </section>
+</body>
+
+</html>

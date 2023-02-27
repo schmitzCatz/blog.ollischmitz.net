@@ -1,0 +1,153 @@
+- name: Grandcentrix GmbH
+  logo: grandcentrix-logo.png
+  position: Team Lead Backend Engineering
+  start: 2022-01-01
+  end:
+  summary:
+    - job: Leading team of Backend Engineers in Azure Cloud Enviroment
+      tags:
+        - Kotlin
+        - Java
+        - Spring Framework
+        - nb-IOT
+        - Prometheus        
+        - Graphana
+        - Kubernetes
+        - Staff Development
+        - Recruiting
+- name: Rola Security Solutions
+  logo: rola-logo.png
+  position: Software Architect
+  start: 2021-06-01
+  end: 2021-11-31
+  summary:
+    - job: System Architecture rsFrame 1.0/2.0 Development
+      tags:
+        - ISO 27001
+        - Moderation
+        - Estimation
+        - Coaching
+        - Documentation
+        - Arc42    
+  qualitfications:
+    - Certified Professional for Software Architecture (CSPA-F)
+- name: Rola Security Solutions GmbH
+  logo: rola-logo.png
+  position: Softwaredeveloper
+  start: 2018-02-01
+  end: 2021-05-31
+  summary:
+    - job: Developing rsFrame modules for German Police Force
+      tags:
+        - Java
+        - Java Swing
+        - Osgi
+        - Spring Framework
+        - SQL
+        - PL/SQL
+    - job: Developing domain specific modules for Cyber Security and Private Sector
+      tags:
+        - Java
+        - Java Swing
+        - Osgi 
+        - Spring Framework
+        - SQL
+        - PL/SQL     
+  qualitfications:
+    - Certified Scrum Developer
+    - Gamified Design Certified Level 1
+- name: OBI Smart Technologies
+  logo: obi-smart-technologies-logo.png
+  position: Softwaredeveloper
+  start: 2016-07-01
+  end: 2018-01-31
+  summary:
+    - job: Implementing Batch Processes for Document Mangement and Financial Processes
+      tags:      
+        - UC4 Automation Engine
+        - PowerShell
+        - Bash        
+        - Java
+        - Spring Framework
+    - job: Implementing Workflows for OBI Corporate Headquarter
+      tags:
+        - BPMN
+        - PL/SQL
+        - Java      
+        - HTML5
+        - CSS3
+        - JavaScript
+- name: QVC Deutschland Inc. & Co. KG
+  logo: qvc-logo.png
+  position: Softwaredeveloper
+  start: 2012-01-01
+  end: 2016-06-31
+  summary:
+    - job: Developing Customer Support Tools
+      tags:
+        - Java 5
+        - PL/SQL
+        - Java Swing
+    - job: Integration and Performance Test
+      tags:
+        - Dynatrace
+        - JProfiler        
+        - Java Server Faces
+        - Hibernate
+        - Spring Framework
+    - job: Implementing ESB Processes in SOA for Finance, Shipping and Warehouse Domains
+      tags:
+        - Tibco Businesworks 5
+        - Tibco Messaging
+        - XML
+        - XSD
+        - RestFul
+        - SOAP
+  qualitfications: 
+    - Tibco Trained Professional
+    - EFSET 68 Advanced CERF C1 English
+- name: Alphasoft GmbH
+  logo: alpasoft-logo.png
+  position: Computer Science Expert, Software Development
+  start: 2011-01-18
+  end: 2011-12-31
+  summary:
+    - job: Development of WebOrder Module, module for doctors to submit orders outside the laboratory
+      tags:
+        - SQL
+        - JavaScript
+        - Apache Tomcat
+        - Java 5
+        - Java Server Pages
+        - JDBC        
+    - job: Development U700 Qualtiy Service Module, module for testing accuracy of Medical Laboratoy Maschines
+      tags:
+        - Caché Object Script
+        - SQL
+        - JavaScript
+        - JQuery
+- name: Alphasoft GmbH
+  logo: alpasoft-logo.png
+  position: Trainee Computer Science Expert, Software Development
+  start: 2008-09-01
+  end: 2011-01-17
+  summary:
+    - job: Developing modules for U700 LIMS
+      tags:
+        - Caché Object Script
+        - SQL
+        - JavaScript (ECMA 3 & 5)
+        - JQuery
+        - SOAP
+        - XML
+        - XSD
+    - job: Graduation project - Developing of a Secure Web API Interface for external Integration of U700 LIMS Masterdata
+      tags:
+        - SQL
+        - JavaScript (ECMA 3 & 5)
+        - Apache Tomcat
+        - Java 5
+        - Java Server Pages
+        - JDBC
+  qualifications:
+    - IHK 2011 - Certified Computer Science Expert, Software Development

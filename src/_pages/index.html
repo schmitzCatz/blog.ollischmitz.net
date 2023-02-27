@@ -2,6 +2,58 @@
 title: Home
 layout: default
 permalink: /
+pagination:
+    enabled: true
 ---
-<h1 class="title">{{ "Hello World!" }}</h1>
-<p class="subtitle">My first website with <strong>Bulma</strong> and <strong>Jekyll</strong></p>
+<section class="section is-hidden">
+    <div class="container">
+        <div class="slides">
+            {% for item in site.data.principles %}
+            <div class="card is-sr-only" id="slide-{{forloop.index}}">
+                <div class="card-content">
+                    <h1>{{ item.name }}</h1>
+                    <p>{{ item.quote }}</p>
+                    <p class="is-italic">{{item.author}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+        {% for post in paginator.posts %}
+        <article class="media box">
+            {%if post.image%}
+            <div class="media-left">
+                <figure class="image is-128x128">
+                    <img src="/assets/images/{{post.image}}" alt="{{post.image-alt}}" class="has-ratio">
+                </figure>
+            </div>
+            {%endif%}
+            <div class="media-content">
+                <p class="title is-4">
+                    <a href="{{ post.url }}" style="color: inherit; text-decoration: inherit;">{{ post.title }}</a>
+                </p>
+                <p class="subtitle is-6">
+                    <time class="entry-date" datetime="{{post.date}}">{{ post.date | date_to_string }}</time>
+                    {% if post.category %}·{% endif %}
+                    {% for category in post.category %}
+                    {{category}}
+                    {% unless forloop.last %}/{%endunless%}
+                    {% endfor %}
+                </p>
+                <div class="content">
+                    {{ post.content | truncatewords: 50}}
+                </div>
+                <div class="buttons is-pulled-right are-small">
+                    <a href="{{ post.url }}" class="button is-link">Continue reading »</a>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+
+        <!-- Pagination links -->
+        {% include pagination.html %}
+
+</section>

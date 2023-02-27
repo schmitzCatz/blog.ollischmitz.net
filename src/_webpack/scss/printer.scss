@@ -1,0 +1,13 @@
+@media print {
+
+    .is-noPrint * {
+        display: none;
+    }
+}
+@page
+{ 
+    size: A4;
+    margin: 0mm 15mm 20mm 25mm;  
+    font-size: 12px;
+} 
+

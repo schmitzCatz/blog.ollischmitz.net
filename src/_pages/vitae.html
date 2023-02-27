@@ -1,0 +1,51 @@
+---
+layout: cv
+permalink: /vitae/
+title: Ciriculum Vitae - Oliver Schmitz
+---
+
+<p class="title is-flex is-justify-content-center">Ciriculum Vitae</p>
+
+<!-- Personal Stuff -->
+<div class="is-flex is-justify-content-center">
+    {% include vcard.html %}
+</div>
+<!-- ./Personal Stuff -->
+
+<!-- Companies -->
+{% for company in site.data.cv %}
+<div class="columns">
+    <div class="column is-2">
+        {{company.start | date: "%B %Y"}}
+    </div>
+    <div class="column is-1 is-noPrint">
+        <figure class="figure">
+            <p class="image is-64x64">
+                <img src="/assets/images/logos/{{company.logo}}" alt="{{company.name}} Logo">
+            </p>
+        </figure>
+    </div>
+    <div class="column">
+        <strong>{{company.name}}</strong>
+        <ul>
+            {% for entry in company.summary %}
+            <li>
+                {{entry.job}}
+                <div class="tags">
+                    {% for tag in entry.tags %}
+                    <span class="tag is-info">{{tag}}</span>
+                    {% endfor %}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div class="tags">
+            {% for qualification in company.qualitfications %}
+            <div class="tag is-link">{{qualification}}</div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+<!-- ./Companies -->

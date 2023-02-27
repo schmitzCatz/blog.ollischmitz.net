@@ -1,20 +1,36 @@
 <!doctype html>
-<html>
+<html class="has-navbar-fixed-bottom has-background-white-ter">
 
 {% include head.html %}
 
 <body>
+  <section id="head">
+    <!-- Hero -->
+    {% include hero.html %}
+    <!-- ./Hero-->
 
-  <!--
-
-  <section class="section">
+    <!-- Navigation -->
     {% include navigation.html %}
-    <div class="container">
+    <!-- ./Navigation -->
+  </section>
+
+  <!-- Content -->
+  <div class="content columns mt-2">
+    <div class="column is-10">
       {{ content }}
     </div>
-  </section>
--->
+    <!-- sidebar-->
+    {% include sidebar.html %}
+    <!--./Sidebar-->
+  </div>
 
+  <!-- ./Content -->
+
+  <section id="footer" class="pt-6">
+    <!-- Footer -->
+    {% include footer.html %}
+    <!-- ./Footer -->
+  </section>
 </body>
 
 </html>

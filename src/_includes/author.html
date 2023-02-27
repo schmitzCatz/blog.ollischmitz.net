@@ -1,0 +1,20 @@
+{% capture time %}{{ content | reading_time }}{% endcapture %}
+{% assign author = site.data.people[page.author] %}
+<article class="media author">
+    <figure class="media-left">
+        <figure class="image is-64x64">
+            <img src="/assets/images/{{author.image}}" class="is-rounded">
+        </figure>
+    </figure>
+    <div class="media-content">
+        <div class="content">
+            <p>
+                <strong>{{author.name}}</strong> <a href="https://twitter.com/{{author.twitter}}">@{{author.twitter}}</a><br>
+                <span class="has-text-grey">{{ author.motto}}<br>
+                    <time datetime="{{page.date}}">{{ page.date | date_to_string }}</time> · 
+                    Takes {{content | reading_time | pluralize: "minute" }} to read.
+                </span>
+            </p>
+        </div>
+    </div>
+</article>
