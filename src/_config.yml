@@ -11,6 +11,10 @@ include:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - yarn.lock
+  - postcss.config.js
+  - webpack.config.js
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
