@@ -1,0 +1,50 @@
+name: blog.ollischmitz.net Deploy
+run-name: ${{ github.actor}} is testing out GitHub Actions 🚀
+on: 
+  push:
+    branches:
+      - release
+    tags:
+      - v*
+jobs:  
+  build:    
+    runs-on: ubuntu-20.04
+    env:
+      BUNDLE_GEMFILE: ${{ github.workspace }}/src/Gemfile
+    steps:
+      - uses: actions/checkout@v3      
+      - name: Setup Ruby 🧑‍💻
+        uses: ruby/setup-ruby@v1      
+        with:
+          ruby-version: '3.1'          
+          working-directory: ${{ github.workspace }}/src/          
+      - name: Install gems 💎
+        run: bundler install
+      - name: Setup Node 🧑‍💻
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: Install dependencies 🎋
+        run: yarn --cwd "${{ github.workspace }}/src" install
+      - name: Run build 👷
+        run: yarn --cwd "${{ github.workspace }}/src" build
+      - name: Login to hub 🔐        
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: Metadata 🐋
+        uses: docker/metadata-action@v4
+        with:
+          tags: |
+              type=ref,event=branch
+              type=ref,event=pr
+              type=semver,pattern={{version}}
+              type=semver,pattern={{major}}.{{minor}}
+          images: oschmitz/blog
+      - name: Build Image 🐳
+        uses: docker/build-push-action@v4
+        with:
+          context: . 
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

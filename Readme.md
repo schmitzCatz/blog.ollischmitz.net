@@ -1,7 +1,5 @@
 # Blog
 
-uses jekyll-compose
-
 ```
   draft      # Creates a new draft post with the given NAME
   post       # Creates a new post with the given NAME
@@ -17,13 +15,17 @@ jekyll draft "My new draft"
 jekyll publish _drafts/my-new-draft.md
 ```
 
-
 ## Development
 * https://jekyllrb.com/
+* https://webpack.js.org/
+* https://bulma.io/
+* https://bulma.io/extensions/
+* https://fontawesome.com/
+* https://containers.dev/
 
-## Utility container
-``
-docker run --rm --volume="${PWD}:/srv/jekyll" -p 35729:35729 -p 4000:4000 -it jekyll/jekyll sh
-``
-jekyll s --livereload --force_polling
+### Test GitHub Actions with `act`
+
+https://github.com/nektos/act
+
+`act --container-architecture linux/amd64 --env ImageOS=ubuntu22 `
 
