@@ -1,5 +1,5 @@
-name: blog.ollischmitz.net Deploy
-run-name: ${{ github.actor}} is testing out GitHub Actions 🚀
+name: blog.ollischmitz.net build
+run-name: ${{ github.actor}} is building 🚀
 on: 
   push:
     branches:
@@ -45,6 +45,7 @@ jobs:
       - name: Build Image 🐳
         uses: docker/build-push-action@v4
         with:
+          push: true
           context: . 
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

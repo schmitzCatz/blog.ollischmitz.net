@@ -4,7 +4,7 @@
   start: 2022-01-01
   end:
   summary:
-    - job: Leading team of Backend Engineers in Azure Cloud Enviroment
+    - job: Leading team of Backend Engineers in Azure Cloud Environment
       tags:
         - Kotlin
         - Java
@@ -29,7 +29,7 @@
         - Coaching
         - Documentation
         - Arc42    
-  qualitfications:
+  qualifications:
     - Certified Professional for Software Architecture (CSPA-F)
 - name: Rola Security Solutions GmbH
   logo: rola-logo.png
@@ -53,7 +53,7 @@
         - Spring Framework
         - SQL
         - PL/SQL     
-  qualitfications:
+  qualifications:
     - Certified Scrum Developer
     - Gamified Design Certified Level 1
 - name: OBI Smart Technologies
@@ -62,7 +62,7 @@
   start: 2016-07-01
   end: 2018-01-31
   summary:
-    - job: Implementing Batch Processes for Document Mangement and Financial Processes
+    - job: Implementing Batch Processes for Document Management and Financial Processes
       tags:      
         - UC4 Automation Engine
         - PowerShell
@@ -97,13 +97,13 @@
         - Spring Framework
     - job: Implementing ESB Processes in SOA for Finance, Shipping and Warehouse Domains
       tags:
-        - Tibco Businesworks 5
+        - Tibco BusinessWorks 5
         - Tibco Messaging
         - XML
         - XSD
         - RestFul
         - SOAP
-  qualitfications: 
+  qualifications: 
     - Tibco Trained Professional
     - EFSET 68 Advanced CERF C1 English
 - name: Alphasoft GmbH
@@ -120,7 +120,7 @@
         - Java 5
         - Java Server Pages
         - JDBC        
-    - job: Development U700 Qualtiy Service Module, module for testing accuracy of Medical Laboratoy Maschines
+    - job: Development U700 Quality Service Module, module for testing accuracy of Medical Laboratory Machines
       tags:
         - Caché Object Script
         - SQL
@@ -132,7 +132,7 @@
   start: 2008-09-01
   end: 2011-01-17
   summary:
-    - job: Developing modules for U700 LIMS
+    - job: Developing modules for U700 Laboratory Information System (LIMS)
       tags:
         - Caché Object Script
         - SQL
@@ -141,7 +141,7 @@
         - SOAP
         - XML
         - XSD
-    - job: Graduation project - Developing of a Secure Web API Interface for external Integration of U700 LIMS Masterdata
+    - job: Graduation project - Developing of a Secure Web API Interface for external Integration of U700
       tags:
         - SQL
         - JavaScript (ECMA 3 & 5)
