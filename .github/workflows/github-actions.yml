@@ -34,10 +34,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Metadata 🐋
+        id: meta
         uses: docker/metadata-action@v4
         with:
           tags: |
-              type=ref,event=branch              
+              type=ref,event=branch                      
               type=semver,pattern={{version}}              
           images: oschmitz/blog
       - name: Build Image 🐳
