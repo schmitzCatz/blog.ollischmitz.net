@@ -23,7 +23,14 @@ jekyll publish _drafts/my-new-draft.md
 * https://fontawesome.com/
 * https://containers.dev/
 
-### Test GitHub Actions with `act`
+## Release
+
+Trigger release workflow
+
+`git tag v*`
+`git push --tags`
+
+## Test GitHub Actions with `act`
 
 https://github.com/nektos/act
 
